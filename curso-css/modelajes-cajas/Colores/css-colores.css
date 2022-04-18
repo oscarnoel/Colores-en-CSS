@@ -11,11 +11,16 @@
     
     IMPORTANTE: Recordad que existe el color "transparent"
 
-*/
-
+    CurrentColor: Es una palabra clave que se puede usar en
+    Lugar de cualquier valor de color y usará el valor ya sea
+    establecido o heredado en la propiedad color.
+    
+    */
+    
 body{
     margin: 0;
     background-color: #333;
+    color: aqua;
 }
 
 .box{
@@ -46,6 +51,10 @@ body{
 
     background-color: transparent;
 
- 
+}
 
+#box-4{
+    color: lightgoldenrodyellow; 
+    background-color: currentColor; /*Heredar de la propiedad Color del padre o  si el propio elemento tieen esa propiedad lo adapta*/
+    /*Ya no estan USADO!*/
 }
