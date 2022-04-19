@@ -15,17 +15,48 @@
     Lugar de cualquier valor de color y usará el valor ya sea
     establecido o heredado en la propiedad color.
     
+    RGB/RGBA
+      En el modo RGB tenemos tres canales (Red,Green,Blue) y tenemos
+      8 bit de color por canal, (Cada bit tiene dos posibles valores 0 o 1)
+      lo que significa que tenemos 2^8 posibles valores, que van desde 0
+      hasta 255.
+
+      Esto nos da un total de 255 * 255 * 255 = 16.586.375 colores
+
+      su sintaxis es rgb (R,G,B)
+
+      Si ponemos todos los canales a 0 tendremos un negro puro y si los
+      ponemos en 255 tendremos un blanco.
+
+      Para movernos por la gama de grises debemos poner los 3
+      canales con el mismo valor, si ponemos los 3 canale a 128
+      tendremos el gris puro.
+
+      El modo RGB nos da la opcion de utilizar un cuarto canal que corresponderia
+      al canal de alpa, es decir, la transparencia y su valor va del 0 a 1.
+      Tenemos dos sintaxis y su valor va desde 0 a 1. Tenemos dos sintaxis
+      para utilizar el canal alpha
+
+      rgba(R,G,B,A)
+      rgb(R,G,B / A)
+
     */
     
+*{
+    box-sizing: border-box;
+}
+
 body{
-    margin: 0;
+    padding-bottom: 1px;
     background-color: #333;
     color: aqua;
 }
 
 .box{
+    margin-left: auto;
+    margin-right: auto;
 
-    margin-bottom: 10px;
+    margin-bottom: 3rem;
     
     width: 300px;
     height: 300px;
@@ -58,3 +89,78 @@ body{
     background-color: currentColor; /*Heredar de la propiedad Color del padre o  si el propio elemento tieen esa propiedad lo adapta*/
     /*Ya no estan USADO!*/
 }
+
+#box-5{
+    padding-top: 5.5em;
+    padding-left: 3em;
+    
+    font-family: sans-serif;
+
+
+    font-size: 1.5rem;
+
+    color: rgb(0,0,0);
+    background-color: rgb(255,255,255);
+}
+
+#box-6{
+    padding-top: 5.5em;
+    padding-left: 3em;
+    
+    font-family: sans-serif;
+
+
+    font-size: 1.5rem;
+
+    color: rgb(0,0,0);
+    background-color: rgb(90,90,90);
+}
+
+
+#box-7{
+    padding-top: 5.5em;
+    padding-left: 1.5em;
+
+    font-family: sans-serif;
+
+
+    font-size: 1.5rem;
+
+    color: rgb(0,0,0);
+    /* background-color: rgb(212 100 212 / 0.9); */
+    background-color: rgb(242, 100, 20, 0.5);
+}
+
+
+#box-8{
+
+    padding-top: 5.5em;
+    padding-left: 2em;
+    
+    font-family: sans-serif;
+
+
+    font-size: 1.5rem;
+
+    color: rgb(0,0,0);
+    box-shadow: 10px 10px rgb( 0 0 0 / 0.5);
+
+}
+
+#box-9{
+
+    padding-top: 5.5em;
+    padding-left: 2em;
+    
+    font-family: sans-serif;
+
+
+    font-size: 1.5rem;
+
+    color: rgb(0,0,0);
+    box-shadow: 5px 5px 10px rgb( 0 0 0 / 0.7);
+
+}
+
+
+
