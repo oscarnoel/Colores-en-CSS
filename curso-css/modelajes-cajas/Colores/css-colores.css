@@ -16,6 +16,7 @@
     establecido o heredado en la propiedad color.
     
     RGB/RGBA
+
       En el modo RGB tenemos tres canales (Red,Green,Blue) y tenemos
       8 bit de color por canal, (Cada bit tiene dos posibles valores 0 o 1)
       lo que significa que tenemos 2^8 posibles valores, que van desde 0
@@ -39,6 +40,33 @@
 
       rgba(R,G,B,A)
       rgb(R,G,B / A)
+
+      Hexadecimal
+
+       La notación hexadecimalL es la más común en desarrollo web, 
+       se basa en los mismos principios que el RGB pero escrito en
+       notación hexadecimal.
+       
+       EL sistema hexadecimal es un sistema basado en 16 valores del 0 al 15 Utiliza Los dígitos del 0 al 9 y Las Letras de la A a la F En este tipo de notacíon también necesitamos 256 valores. Se compone de 16 caracteres en parejas ya que 16*16  = 256
+       
+       0 1 2 3 4 5 6 7 8 9 A B C D E F 
+       0 1 2 3 4 5 6 7 8 9 A B C D E F   
+
+         Para indicar que vamos a usar notación hexadecimal debemos usar el símbolo de 
+         hash/almohadilla # y a continuación usaremos esta notación por parejas.
+         #RRGGBB
+
+         Cuando una pareja usa el mismo valor se puede omitir el    
+         segundo valor, siempre que se haga en las 3 parejas.
+
+          rgb(255,255, 255) -> #FFFFFE -> #FFF
+          rgb(0,0,0) -> #000000 -> #000
+
+           También tenemos la opción de usar transparencias en 
+           hexadecimal añadiendo un cuarto canal que sigue 
+           las mismas normas. 
+
+
 
     */
     
@@ -162,5 +190,35 @@ body{
 
 }
 
+
+#box-10{
+
+    padding-top: 5.5em;
+    padding-left: 2em;
+    
+    font-family: sans-serif;
+
+
+    font-size: 1.5rem;
+
+    color: rgb(0,0,0);
+    background-color: #ffffff;
+
+}
+
+
+#box-11{
+
+    padding-top: 5.5em;
+    padding-left: 2em;
+    
+    font-family: sans-serif;
+    font-size: 1.5rem;
+
+    color: rgb(0,0,0);
+    background-color: #00ff0020;
+    box-shadow: 5px 5px 10px #00000088;
+
+}
 
 
