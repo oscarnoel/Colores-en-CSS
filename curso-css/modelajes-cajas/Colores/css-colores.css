@@ -66,6 +66,43 @@
            hexadecimal añadiendo un cuarto canal que sigue 
            las mismas normas. 
 
+        HSL / HSLA
+
+          EL modo de color HSL es el más intuitivo para los humanos.
+          Su nombre viene de las siglas Hue (tono) Saturation (saturación) y Lightness (luminancia) 
+          
+          El primer valor es el angulo en el circulo acromatico dodne 0 y 360 sera el color rojo.
+          Hay ciertos valores que nos puede servir como referencia para relacionar mejor los
+          colores con sus angulos.
+
+           e -> rojo 
+           60 -> amarillo 
+           120 -> verde 
+           180 -> cyan 
+           240 -> azul 
+           300 -> magenta 
+         
+        El segundo valor es la saturacion o intensidad del color
+        0% -> Gris
+        100% -> Color Puro
+
+        Nota: Es importante que aunque el valor de saturacion o 
+        luminancia sea 0 hay que poner un 0% si no, no funcionara
+
+        El modo HSL tambien admite transparencia y su sintaxis
+        es la misma que la del modo RGB. Tenemos dos sintaxis
+        disponible.
+
+        hsla(h,s,l,a)
+        hsl(h,s,l/a)
+
+        En ambos casos el valor del alpha va del 0 al 1
+
+        Existen otros cuatro modos de color en las que esta
+        trabajando que serian CMYK (Cyan, Magenta, Yellow, y Black)
+        , HWB(Hue, Whiteness, y Blackness), lab(Lightness, distance a, 
+        distance b) y lch(Lightness, chroma, sue), todos estan en el
+        borrador del modulo de color de nivel 4 pero aun no en el estandar
 
 
     */
@@ -76,7 +113,7 @@
 
 body{
     padding-bottom: 1px;
-    background-color: #333;
+    background-color: hsl(0, 100%, 80%);
     color: aqua;
 }
 
@@ -220,5 +257,60 @@ body{
     box-shadow: 5px 5px 10px #00000088;
 
 }
+
+
+
+#box-12{
+
+    padding-top: 5.5em;
+    padding-left: 2em;
+    
+    font-family: sans-serif;
+    font-size: 1.5rem;
+
+    color: rgb(0,0,0);
+    background-color: #00ff0020;
+    box-shadow: 5px 5px 10px #00000088;
+
+}
+
+#box-12{
+
+    padding-top: 5.5em;
+    padding-left: 3.2em;
+    
+    font-family: sans-serif;
+
+    font-size: 1.5rem;
+
+    color: rgb(0,0,0);
+    background-color: hsl(300, 100%, 50%); /*50% es lo puro*/
+
+}
+
+#box-13{
+
+    padding-top: 5.5em;
+    padding-left: 2.5em;
+    
+    font-family: sans-serif;
+
+    font-size: 1.5rem;
+
+    color: rgb(0,0,0);
+    background-color: hsl(120, 80%, 50%); /*50% es lo puro*/
+    box-shadow: 5px 5px 0px hsl(0 0% 0% 0.8);/*Sin las , tambien se puede es una sintaxis nuevas*/
+
+    /*Serie de paginas para saber que colores elegir
+    
+     - brandcolors.net
+     - htmlcolorcodes.com/es/
+     - colorhunt.co
+     - color.adobe.com
+
+    */
+}
+
+
 
 
